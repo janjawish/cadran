@@ -1,0 +1,147 @@
+import type { CatalogWatch, MarketComparable } from "./types";
+export const CATALOG: CatalogWatch[] = [
+  {
+    id: "rolex-126610ln",
+    brand: "Rolex",
+    collection: "Submariner",
+    model: "Submariner Date",
+    reference: "126610LN",
+    variant: "Lunette noire",
+    diameter: 41,
+    material: "Acier",
+    dial: "Noir",
+    movement: "Automatique · 3235",
+    complications: ["Date"],
+    bracelet: "Oyster · acier",
+    period: "Depuis 2020",
+    image: "/images/rolex.webp",
+  },
+  {
+    id: "rolex-116610ln",
+    brand: "Rolex",
+    collection: "Submariner",
+    model: "Submariner Date",
+    reference: "116610LN",
+    variant: "Lunette noire",
+    diameter: 40,
+    material: "Acier",
+    dial: "Noir",
+    movement: "Automatique · 3135",
+    complications: ["Date"],
+    bracelet: "Oyster · acier",
+    period: "2010–2020",
+    image: "",
+  },
+  {
+    id: "omega-seamaster",
+    brand: "Omega",
+    collection: "Seamaster",
+    model: "Seamaster Diver 300M",
+    reference: "210.30.42.20.03.001",
+    variant: "Cadran bleu",
+    diameter: 42,
+    material: "Acier",
+    dial: "Bleu",
+    movement: "Automatique · 8800",
+    complications: ["Date"],
+    bracelet: "Acier",
+    period: "Depuis 2018",
+    image: "/images/omega.webp",
+  },
+  {
+    id: "tudor-bb58",
+    brand: "Tudor",
+    collection: "Black Bay",
+    model: "Black Bay Fifty-Eight",
+    reference: "M79030N-0001",
+    variant: "Noir et doré",
+    diameter: 39,
+    material: "Acier",
+    dial: "Noir",
+    movement: "Automatique · MT5402",
+    complications: [],
+    bracelet: "Acier riveté",
+    period: "Depuis 2018",
+    image: "/images/tudor.webp",
+  },
+  {
+    id: "cartier-santos",
+    brand: "Cartier",
+    collection: "Santos",
+    model: "Santos de Cartier",
+    reference: "WSSA0029",
+    variant: "Modèle moyen",
+    diameter: 35.1,
+    material: "Acier",
+    dial: "Argenté",
+    movement: "Automatique · 1847 MC",
+    complications: [],
+    bracelet: "Acier · QuickSwitch",
+    period: "Depuis 2018",
+    image: "/images/cartier.webp",
+  },
+  {
+    id: "tag-carrera",
+    brand: "TAG Heuer",
+    collection: "Carrera",
+    model: "Carrera Chronograph",
+    reference: "CBN2010.BA0642",
+    variant: "Cadran noir",
+    diameter: 42,
+    material: "Acier",
+    dial: "Noir",
+    movement: "Automatique · Heuer 02 / TH20-00 selon année",
+    complications: ["Date", "Chronographe"],
+    bracelet: "Acier",
+    period: "Depuis 2020",
+    image: "/images/tag.webp",
+  },
+];
+// Curated illustrative examples, never a live market feed or certified quotation.
+const BASES: Record<string, number> = {
+  "126610LN": 11200,
+  "116610LN": 9600,
+  "210.30.42.20.03.001": 4150,
+  "M79030N-0001": 2850,
+  WSSA0029: 5950,
+  "CBN2010.BA0642": 3850,
+};
+export const DEMO_MARKET: MarketComparable[] = Object.entries(BASES).flatMap(
+  ([reference, price]) =>
+    [-0.09, -0.035, 0, 0.04, 0.085].map((delta, i) => ({
+      reference,
+      price: Math.round((price * (1 + delta)) / 25) * 25,
+      currency: "EUR" as const,
+      observedAt: `2026-09-0${i + 1}`,
+      source: "Catalogue pédagogique CADRAN · données fictives",
+      kind: "demo" as const,
+      condition: "good" as const,
+      box: "yes" as const,
+      papers: "yes" as const,
+    })),
+);
+export const money = (value: number | undefined) =>
+  value === undefined
+    ? "Non renseigné"
+    : new Intl.NumberFormat("fr-FR", {
+        style: "currency",
+        currency: "EUR",
+        maximumFractionDigits: 0,
+      }).format(value);
+export const dateLabel = (value: number) =>
+  new Date(value).toLocaleDateString("fr-FR", {
+    day: "numeric",
+    month: "short",
+  });
+export const conditionLabels = {
+  excellent: "Excellent état",
+  good: "Bon état",
+  fair: "État correct",
+  poor: "À réviser / très usée",
+  unknown: "À déterminer",
+};
+export const presenceLabels = {
+  yes: "Oui",
+  no: "Non",
+  unknown: "Non renseigné",
+};

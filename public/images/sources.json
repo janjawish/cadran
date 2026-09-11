@@ -1,0 +1,63 @@
+{
+  "downloadDate": "2026-09-10",
+  "assets": [
+    {
+      "file": "hero-watch.jpg",
+      "subject": "Dark editorial silver wristwatch; source calls it Rolex but visible dial is generic, use only as general horology hero",
+      "author": "Tony Litvyak",
+      "source": "https://unsplash.com/photos/a-rolex-watch-on-a-tray-with-a-black-background-ScLkumSYzQs",
+      "url": "https://images.unsplash.com/photo-1710671544323-8e448efa283e?w=2000&q=85&fm=jpg&fit=max",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "notes": "Native photo downloaded at requested width 2000. No local edits. Attribution appreciated. Optimisé en WebP pour cette application."
+    },
+    {
+      "file": "omega-seamaster-catalog.png",
+      "subject": "Omega Seamaster Diver 300M 210.30.42.20.03.001",
+      "author": "Omega / Hvelplund catalog",
+      "source": "https://hvelplund.dk/products/omega-seamaster-diver-300m-co-axial-master-chronometer-1",
+      "url": "https://hvelplund.dk/cdn/shop/products/omega-seamaster-diver-300m-21030422003001-l.png?v=1647528217",
+      "license": "Catalog reference asset; no open reuse license verified",
+      "notes": "Transparent packshot, 800 × 1100. No local edits. Optimisé en WebP pour cette application."
+    },
+    {
+      "file": "cartier-santos-catalog.png",
+      "subject": "Cartier Santos Medium WSSA0029",
+      "author": "Cartier / Jewels by Love catalog",
+      "source": "https://www.jewelsbylove.com/santos-de-cartier-wssa0029.html",
+      "url": "https://www.jewelsbylove.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/r/crwssa0029_23.png",
+      "license": "Catalog reference asset; no open reuse license verified",
+      "notes": "White background, 500 × 500. No local edits. Optimisé en WebP pour cette application."
+    },
+    {
+      "file": "rolex-submariner-126610ln.png",
+      "subject": "Rolex Submariner Date 126610LN / m126610ln-0001",
+      "reference": "126610LN",
+      "author": "Rolex",
+      "source": "https://www.rolex.com/watches/submariner/m126610ln-0001",
+      "url": "https://media.rolex.com/image/upload/q_auto/f_png/t_v7-cover-majesty-landscape/c_limit,w_1200/v1/a677b2c664f6/catalogue/2026/upright-c/m126610ln-0001",
+      "license": "Brand reference asset; no open reuse license verified",
+      "notes": "Official exact-reference packshot. Native source requested as PNG width 1200. No local edits. Optimisé en WebP pour cette application."
+    },
+    {
+      "file": "tudor-black-bay-79030n.jpg",
+      "subject": "Tudor Black Bay Fifty Eight M79030N-0001",
+      "reference": "M79030N-0001",
+      "author": "Tudor / Montres & Bijoux catalog",
+      "source": "https://www.montresbijoux.com/en/collection-30/orologi-uomo/black-bay-fifty-eight",
+      "url": "https://www.montresbijoux.com/easyUp/store/zoom/30_m79030n-0001_3319_z.jpg",
+      "license": "Catalog reference asset; no open reuse license verified",
+      "notes": "Exact-reference watch confirmed on retailer page. White-background packshot. No local edits. Optimisé en WebP pour cette application."
+    },
+    {
+      "file": "tag-heuer-carrera-cbn2010.png",
+      "subject": "TAG Heuer Carrera Chronograph CBN2010.BA0642",
+      "reference": "CBN2010.BA0642",
+      "author": "TAG Heuer",
+      "source": "https://www.tagheuer.com/in/en/timepieces/collections/tag-heuer-carrera/42-mm-th20-00/CBN2010.BA0642.html",
+      "url": "https://www.tagheuer.com/on/demandware.static/-/Sites-tagheuer-master/default/dwc6c5a740/TAG_Heuer_Carrera/CBN2010.BA0642/CBN2010.BA0642_Soldier.png",
+      "license": "Brand reference asset; no open reuse license verified",
+      "notes": "Official exact-reference transparent packshot. Current official spec says TH20-00, 80-hour reserve; older same reference used Heuer 02. No local edits. Optimisé en WebP pour cette application."
+    }
+  ]
+}
