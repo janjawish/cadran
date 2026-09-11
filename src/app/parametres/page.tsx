@@ -41,7 +41,7 @@ const providers: {
   model: string;
   endpoint: string;
 }[] = [
-  { id: "demo", label: "Local · sans IA", model: "", endpoint: "" },
+  { id: "demo", label: "Local · manuel", model: "", endpoint: "" },
   {
     id: "gemini",
     label: "Google Gemini",
@@ -130,7 +130,7 @@ export default function Settings() {
       <PageHeading
         number="05"
         title="À votre mesure."
-        subtitle="Votre lecture, votre intelligence, vos données. Un atelier qui vous ressemble."
+        subtitle="Votre lecture, vos connexions, vos données. Un atelier qui vous ressemble."
       />
       <div className="settings-layout">
         <nav className="settings-nav" aria-label="Sections des paramètres">
@@ -138,7 +138,7 @@ export default function Settings() {
             01 <span>Lecture</span>
           </a>
           <a href="#intelligence">
-            02 <span>Intelligence</span>
+            02 <span>Connexions</span>
           </a>
           <a href="#donnees">
             03 <span>Données</span>
@@ -192,14 +192,14 @@ export default function Settings() {
           </section>
           <section id="intelligence" className="settings-section">
             <div className="section-label">
-              02 / INTELLIGENCE
+              02 / CONNEXIONS
               <Cable size={15} />
             </div>
-            <h2>Choisissez votre regard augmenté.</h2>
+            <h2>Connectez votre service d’analyse.</h2>
             <p>
-              Sans IA, le catalogue, les estimations de démonstration et la
-              collection fonctionnent localement. Pour reconnaître vos photos,
-              connectez votre propre fournisseur.
+              Le catalogue, les estimations de démonstration et la collection
+              fonctionnent sans service externe. Pour reconnaître vos photos,
+              connectez le fournisseur de votre choix.
             </p>
             <form
               onSubmit={(e) => {
@@ -329,7 +329,7 @@ export default function Settings() {
                   <div className="info-box mt-5">
                     <Cloud size={18} />
                     <p>
-                      <strong>Envoi direct au fournisseur choisi.</strong> Les
+                      <strong>Envoi direct au service choisi.</strong> Les
                       images et le texte de chaque analyse sont transmis à cette
                       API. La collection complète n’est pas envoyée. La clé est
                       stockée dans IndexedDB, sans chiffrement applicatif. Elle

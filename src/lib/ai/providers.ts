@@ -121,7 +121,7 @@ class CloudProvider implements AIProvider {
   ): Promise<T> {
     const s = this.settings;
     if (!s.model.trim())
-      throw new Error("Choisissez un modèle dans Paramètres → Intelligence.");
+      throw new Error("Choisissez un modèle dans Paramètres → Connexions.");
     if (!s.apiKey && s.provider !== "custom" && s.provider !== "bridge")
       throw new Error(
         "Clé API absente. Ajoutez votre clé dans les paramètres, ou utilisez le mode local.",
@@ -280,7 +280,7 @@ class CloudProvider implements AIProvider {
     const parsed = schema.safeParse(parseJSON(raw));
     if (!parsed.success)
       throw new Error(
-        "Réponse IA incomplète ou invalide. Aucun résultat incertain n’a été enregistré.",
+        "Réponse du service incomplète ou invalide. Aucun résultat incertain n’a été enregistré.",
       );
     return parsed.data;
   }
@@ -520,7 +520,7 @@ export class LocalProvider implements AIProvider {
     const c = CATALOG.find((x) => x.id === input.catalogId);
     if (!c)
       throw new Error(
-        "En mode local, choisissez une référence. Pour reconnaître vos photos, configurez un moteur IA.",
+        "En mode local, choisissez une référence. Pour reconnaître vos photos, connectez un service d’analyse.",
       );
     return {
       source: "manual",

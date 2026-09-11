@@ -531,7 +531,7 @@ export function WatchDetail() {
     ? "DÉMONSTRATION"
     : manual
       ? "IDENTIFICATION MANUELLE"
-      : "ANALYSE IA";
+      : "ANALYSE AUTOMATISÉE";
   const specs = [
     ["Collection", watch.collection],
     ["Référence", watch.reference],
@@ -752,7 +752,7 @@ export function WatchDetail() {
               </div>
               <p className="muted mb-4">
                 Les photos ajoutées sont conservées sans relancer l’analyse.
-                Pour une nouvelle identification IA, lancez un nouveau scan.
+                Pour une nouvelle identification, lancez un nouveau scan.
               </p>
               <PhotoCapture photos={newPhotos} onChange={setNewPhotos} />
               <button

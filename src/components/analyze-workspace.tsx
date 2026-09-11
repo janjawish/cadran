@@ -70,7 +70,7 @@ export function AnalyzeWorkspace({ kind }: { kind: "scan" | "listing" }) {
     setNotice("");
     if (local && !catalogId) {
       setError(
-        "Choisissez un modèle dans le catalogue local, ou configurez une IA pour reconnaître vos photos.",
+        "Choisissez un modèle dans le catalogue local, ou connectez un service de reconnaissance pour analyser vos photos.",
       );
       return;
     }
@@ -381,7 +381,7 @@ export function AnalyzeWorkspace({ kind }: { kind: "scan" | "listing" }) {
           </div>
           <div className="provider-status">
             <span className="pill">
-              {local ? "MODE LOCAL" : settings.provider.toUpperCase()}
+              {local ? "MODE LOCAL" : "SERVICE CONNECTÉ"}
             </span>
             <Link className="text-button" href="/parametres/">
               Configurer
@@ -389,14 +389,24 @@ export function AnalyzeWorkspace({ kind }: { kind: "scan" | "listing" }) {
             </Link>
           </div>
           <h2>
-            {local
-              ? "Votre œil.<br/><em>Notre catalogue.</em>"
-              : "Des indices.<br/><em>Une identification.</em>"}
+            {local ? (
+              <>
+                Votre œil.
+                <br />
+                <em>Notre catalogue.</em>
+              </>
+            ) : (
+              <>
+                Des indices.
+                <br />
+                <em>Une identification.</em>
+              </>
+            )}
           </h2>
           <p>
             {local
               ? "Sans clé API, sélectionnez une référence. Vos photos sont conservées, la valeur est calculée à partir du catalogue de démonstration."
-              : "Les photos sélectionnées et les informations saisies seront envoyées directement au fournisseur que vous avez configuré."}
+              : "Les photos sélectionnées et les informations saisies seront analysées par le service que vous avez configuré."}
           </p>
           {local && (
             <label className="field">
@@ -462,7 +472,7 @@ export function AnalyzeWorkspace({ kind }: { kind: "scan" | "listing" }) {
             >
               <ScanLine size={18} />
               {local
-                ? "Créer l’analyse locale"
+                ? "Créer la fiche"
                 : isListing
                   ? "Analyser cette annonce"
                   : "Lancer l’analyse"}

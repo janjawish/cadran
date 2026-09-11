@@ -68,7 +68,7 @@ export async function seedDemo() {
       identification: {
         source: "demo",
         summary:
-          "Exemple pédagogique pré-identifié. Aucune photo n’a été analysée par une IA.",
+          "Exemple pédagogique pré-identifié. Aucune photo n’a été analysée automatiquement.",
         candidates: [
           {
             catalogId: c.id,
